@@ -1,0 +1,13 @@
+.hero-gradient {
+  min-height: 75vh;
+  background: linear-gradient(to bottom right, #020024, #090979, #1e3c72);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
