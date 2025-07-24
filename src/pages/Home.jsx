@@ -1,15 +1,51 @@
 import React from 'react';
-import './Home.css';
+import Navbar from '../component/Navbar';
+import Hero from '../component/Hero';
+import BlogCard from '../component/BlogCard';
+import Footer from '../component/Footer';
 
-function Home() {
+const Home = () => {
+  const blogs = [
+    {
+      id: 1,
+      title: "How to Start Blogging in 2025",
+      author: "GGG",
+      excerpt: "Here's a simple guide to get started with your first blog post..."
+    },
+    {
+      id: 2,
+      title: "React vs Angular: Which to Choose?",
+      author: "AK",
+      excerpt: "We compare two of the most popular frontend frameworks..."
+    },
+    {
+      id: 3,
+      title: "Write for Yourself or for Audience?",
+      author: "VPD",
+      excerpt: "Explore the philosophy behind writing blogs and finding your voice..."
+    }
+  ];
+
   return (
-    <div className="home-container d-flex align-items-center justify-content-center text-white text-center">
-      <div>
-        <h1 className="display-4 fw-bold mb-3">Share Your Knowledge</h1>
-        <h2 className="fs-2">Build Your Audience</h2>
+    <>
+      <Navbar />
+      <Hero />
+      <div className="container my-5">
+        <div className="row">
+          {blogs.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              id={blog.id}
+              title={blog.title}
+              author={blog.author}
+              excerpt={blog.excerpt}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default Home;

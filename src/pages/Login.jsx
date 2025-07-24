@@ -1,11 +1,27 @@
 import React from 'react';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 
 const Login = () => {
   return (
-    <div className="login-page">
-      <h2>Login</h2>
-      <p>Login form will go here.</p>
-    </div>
+    <>
+      <Navbar />
+      <div className="container my-5">
+        <h2>Login</h2>
+        <form>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input type="email" className="form-control" placeholder="Enter your email" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input type="password" className="form-control" placeholder="Enter password" />
+          </div>
+          <button type="submit" className="btn btn-success">Login</button>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 };
 
